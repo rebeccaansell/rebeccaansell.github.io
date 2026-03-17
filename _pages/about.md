@@ -9,25 +9,14 @@ redirect_from:
 
 I'm a first-year PhD student in Computer Science at Georgetown University. My research focuses on fine-tuning large language models, perceived humanness of AI-generated content, reasoning in LLMs, and computational social science applications.
 
-## Current Research
+I work on LLM fine-tuning, AI-generated content detection, and computational social science, with a focus on perceived humanness in political discourse.
 
-My current projects:
+## Timeline
 
-**Humanness Project**: A suite of papers examining how humans perceive AI-generated content. My work includes quantifying human judgments of AI humanness, developing predictive models using the Perceived Humanness Index (PHI), and identifying stylometric signatures across different chatbot families.
-
-**Public Debt is Public**: Fine-tuning large language models to automatically classify sovereign debt contract provisions for a platform providing transparent, searchable debt documentation to policymakers and civil society worldwide.
-
-## Background
-
-I completed my M.S. in Computer Science at Georgetown University in 2025, where I developed the Perceived Humanness Indicator (PHI) and conducted comparative analysis of fine-tuning methods. I received my B.S. in Computer Science from Long Island University with Magna Cum Laude honors and a 3.89 GPA where I played Division 1 Water Polo.
-
-
-## Research Interests
-
-- Fine-tuning Large Language Models
-- AI-Generated Content Detection  
-- Perceived Humanness & AI Alignment
-- Reinforcement Learning from Human Feedback
-- Computational Social Science
-- Social Media Analytics
-- Natural Language Processing
+- **2028 (expected)**: PhD in Computer Science, Georgetown University
+- **2026**: "How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment" accepted to ICLR 2026 Workshop on LLM Reasoning
+- **2025**: "Using stance detection models to improve our understanding of the firearm policy debate on social media" accepted to ICDM 2025 (REU Symposium)
+- **2025**: M.S. in Computer Science, Georgetown University
+- **2025**: Master's Thesis, "Human in the Loop: Fine-Tuning Language Models with Perceived Humanness"
+- **2024**: "Analyzing the perceived humanness of AI-generated social media content around the U.S. 2024 Presidential Debate" published in Election Analysis
+- **2023**: B.S. in Computer Science (Magna Cum Laude), Long Island University
