@@ -10,6 +10,6 @@ excerpt: 'Developing the Perceived Humanness Indicator (PHI) metric for evaluati
 scholar_link: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:u5HHmVD_uO8C'
 ---
 
-This thesis presents the development of the Perceived Humanness Indicator (PHI) metric and conducts comparative analysis of fine-tuning methods for large language models, demonstrating how human feedback can be effectively incorporated in model training.
+As large language models become increasingly sophisticated, understanding what makes AI-generated text appear human-like remains an open challenge, especially in subjective, high-stakes settings like political discourse. This thesis investigates how preference-based fine-tuning methods influence the authenticity of AI-generated content in the context of the 2024 US presidential debate.
 
 [View on Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:u5HHmVD_uO8C)

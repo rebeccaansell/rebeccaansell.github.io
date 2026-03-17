@@ -13,4 +13,4 @@ decision_date: 'March 8, 2026'
 
 This paper evaluates how well large language models can perform multi-step deductive reasoning tasks in a text-based game environment, providing insights into the reasoning capabilities and limitations of current LLMs. Accepted to the ICLR 2026 Workshop on LLM Reasoning.
 
-**Authors**: Rebecca Ansell (first author), Autumn Toney-Wails (second author)
+**Authors**: Rebecca Ansell, Autumn Toney-Wails
