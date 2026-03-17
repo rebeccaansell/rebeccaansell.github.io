@@ -10,6 +10,11 @@ var addressPoints = [
     -122.4075201
   ],
   [
+    "Assessing Public Perception of AI-Generated Social Media Content of the 2024 U.S. Presidential Debate<br />CAPWIC 2025; The George Washington University",
+    38.8994972,
+    -77.0482042
+  ],
+  [
     "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
     51.5074456,
     -0.1277653
