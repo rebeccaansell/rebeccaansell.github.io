@@ -15,4 +15,4 @@ presentation_date: 'March 28, 2026'
 
 This tutorial presentation covers methods for augmenting datasets with generated data and approaches for evaluating the quality and effectiveness of such augmentation. Accepted for presentation at CAPWIC 2026.
 
-**Authors**: Rebecca Ansell (first author), Lisa Singh (second author)
+**Authors**: Rebecca Ansell, Lisa Singh
