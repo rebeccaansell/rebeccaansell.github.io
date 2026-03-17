@@ -13,10 +13,10 @@ I work on LLM fine-tuning, AI-generated content detection, and computational soc
 
 ## Timeline
 
-- **2028 (expected)**: PhD in Computer Science, Georgetown University
-- **2026**: "How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment" accepted to ICLR 2026 Workshop on LLM Reasoning
-- **2025**: "Using stance detection models to improve our understanding of the firearm policy debate on social media" accepted to ICDM 2025 (REU Symposium)
-- **2025**: M.S. in Computer Science, Georgetown University
-- **2025**: Master's Thesis, "Human in the Loop: Fine-Tuning Language Models with Perceived Humanness"
-- **2024**: "Analyzing the perceived humanness of AI-generated social media content around the U.S. 2024 Presidential Debate" published in Election Analysis
-- **2023**: B.S. in Computer Science (Magna Cum Laude), Long Island University
+- **Expected 2028**: PhD in Computer Science, Georgetown University
+- **March 2026**: "How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment" accepted to ICLR 2026 Workshop on LLM Reasoning
+- **September 2025**: "Using stance detection models to improve our understanding of the firearm policy debate on social media" accepted to ICDM 2025 (REU Symposium)
+- **May 2025**: M.S. in Computer Science, Georgetown University
+- **May 2025**: Master's Thesis, "Human in the Loop: Fine-Tuning Language Models with Perceived Humanness"
+- **November 2024**: "Analyzing the perceived humanness of AI-generated social media content around the U.S. 2024 Presidential Debate" published in Election Analysis
+- **May 2023**: B.S. in Computer Science (Magna Cum Laude), Long Island University
