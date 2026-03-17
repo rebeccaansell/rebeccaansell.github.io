@@ -1,8 +1,18 @@
 var addressPoints = [
   [
+    "Augmenting Datasets with Generated Data: Methods and Evaluation<br />CAPWIC 2026; Virginia Tech",
+    37.2219268,
+    -80.4272818
+  ],
+  [
+    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
+    37.7879363,
+    -122.4075201
+  ],
+  [
     "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
-    51.4893335,
-    -0.14405508452768728
+    51.5074456,
+    -0.1277653
   ],
   [
     "Tutorial 1 on Relevant Topic in Your Field<br />UC-Berkeley Institute for Testing Science; Berkeley, CA, USA",
@@ -13,10 +23,5 @@ var addressPoints = [
     "Conference Proceeding talk 3 on Relevant Topic in Your Field<br />Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA",
     34.0536909,
     -118.242766
-  ],
-  [
-    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
-    37.7792588,
-    -122.4193286
   ]
 ];
