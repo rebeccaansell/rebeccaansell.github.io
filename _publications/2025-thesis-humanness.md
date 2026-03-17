@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2025-thesis-humanness
 date: 2025-05-01
-venue: 'Master\'s Thesis, Georgetown University'
+venue: "Master's Thesis, Georgetown University"
 authors: 'Rebecca Ansell'
 excerpt: 'Developing the Perceived Humanness Indicator (PHI) metric for evaluating fine-tuned language models'
 scholar_link: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:u5HHmVD_uO8C'
