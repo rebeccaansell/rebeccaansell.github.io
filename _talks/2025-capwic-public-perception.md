@@ -15,9 +15,5 @@ presentation_date: "March 29, 2025"
 
 This student research short presents findings on how the public perceives AI-generated social media content in the context of the 2024 U.S. Presidential Debate.
 
-**Presentation Details**:
-- Date: March 29, 2025
-- Location: The George Washington University
-- Format: 15-minute presentation + 5-minute Q&A
 
 [Slides (PDF)](/files/Capwic.pptx.pdf)

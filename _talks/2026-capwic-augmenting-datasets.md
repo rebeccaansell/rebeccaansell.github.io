@@ -21,6 +21,4 @@ Attendees leave with practical experience building augmentation pipelines, imple
 
 **Intended Audience**: ML researchers and practitioners with basic Python experience working with limited labeled datasets.
 
-**Technical Requirements**: Projector for presenting.
-
 **Authors**: Rebecca Ansell, Lisa Singh
