@@ -73,8 +73,8 @@ const BOARD = [
     body: ["Division I water polo scholarship", "2023 MAAC Champions 👑"] },
 
   { kind: "honor", short: "Chi Alpha Sigma", icon: "⭐", title: "Chi Alpha Sigma",
-    sub: "National College Athlete Honor Society", when: "LIU",
-    body: ["Honor society for varsity athletes with a 3.4+ GPA."] },
+    sub: "Award · National College Athlete Honor Society", when: "LIU",
+    body: [] },
 
   { kind: "exp", short: "iD Tech", icon: "💻", title: "iD Tech",
     sub: "Online & Summer Camps", when: "May 2022 – Aug 2023", where: "Various locations, USA",
