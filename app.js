@@ -239,7 +239,7 @@ moveTo(0);
 
 // ── Publications ──
 const TYPE_LABEL = { journal: "Journal", conference: "Conference", workshop: "Workshop", thesis: "Thesis", article: "Article" };
-const LINK_LABEL = { pdf: "PDF", arxiv: "arXiv", article: "Read article", code: "Code", slides: "Slides", poster: "Poster", scholar: "Google Scholar", doi: "DOI", openreview: "OpenReview" };
+const LINK_LABEL = { pdf: "PDF", arxiv: "arXiv", article: "Read article", code: "Code", slides: "Slides", poster: "Poster", scholar: "Google Scholar", doi: "DOI", openreview: "OpenReview", paper: "Paper" };
 const pubList = $("#pub-list");
 const pubFilters = $("#pub-filters");
 let pubFilter = "all";
