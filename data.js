@@ -159,7 +159,7 @@ const BOARD = [
 
   { kind: "chance", short: "NeurIPS '26", icon: "?", title: "NeurIPS 2026 · AI & the Self",
     sub: "Chance · Poster", when: "Dec 2026", where: "Paris, France",
-    body: ["\"Provenance and Perceived Humanness in Social Media Political Discourse.\""],
+    body: ["\"Provenance and Perceived Humanness in Social Media Political Discourse.\" With Lisa Singh, Tiago Ventura and Leticia Bode."],
     link: { url: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf", label: "Paper" } },
 
   { kind: "future", short: "Tudor", icon: "🇬🇧", title: "AI Engineer Intern",
@@ -197,7 +197,7 @@ const PUBLICATIONS = [
   { year: 2026, type: "workshop", venue: "NeurIPS 2026 · AI & the Self Workshop",
     where: "Paris, France",
     title: "Provenance and Perceived Humanness in Social Media Political Discourse",
-    authors: "Ansell, R., et al.", links: { paper: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf" } },
+    authors: "Ansell, R., Singh, L., Ventura, T., Bode, L.", links: { paper: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf" } },
   { year: 2026, type: "workshop", venue: "IJCAI-ECAI 2026 · Logical & Symbolic Reasoning of LLMs Workshop",
     where: "Bremen, Germany",
     title: "Clueing up LLMs with Tool-Augmented Deductive Reasoning",
