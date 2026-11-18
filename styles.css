@@ -421,6 +421,11 @@ button { font: inherit; color: inherit; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .doodle * { animation: none !important; } }
 
+@media (max-width: 420px) {
+  .topbar nav a { padding: 4px 3px; font-size: .55rem; letter-spacing: 0; }
+  .brand .tile { width: 19px; height: 19px; font-size: .6rem; }
+}
+
 .footer { text-align: center; padding: 28px 16px 40px; font-size: .88rem; color: var(--muted); border-top: 3px solid var(--ink); }
 
 /* ── Responsive ── */
