@@ -163,7 +163,8 @@ const BOARD = [
 
   { kind: "chance", short: "NeurIPS '26", icon: "?", title: "NeurIPS 2026 · AI & the Self",
     sub: "Chance · Poster", when: "Dec 2026", where: "Paris, France",
-    body: ["\"Provenance and Perceived Humanness in Social Media Political Discourse.\""] },
+    body: ["\"Provenance and Perceived Humanness in Social Media Political Discourse.\""],
+    link: { url: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf", label: "Camera-ready PDF" } },
 
   { kind: "future", short: "Area Exam", icon: "📝", title: "Area Exam",
     sub: "Next step",
@@ -196,7 +197,7 @@ const PUBLICATIONS = [
   { year: 2026, type: "workshop", venue: "NeurIPS 2026 · AI & the Self Workshop",
     where: "Paris, France",
     title: "Provenance and Perceived Humanness in Social Media Political Discourse",
-    authors: "Ansell, R., et al.", links: {} },
+    authors: "Ansell, R., et al.", links: { pdf: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf", openreview: "https://openreview.net/forum?id=Noc5ThJYu7" } },
   { year: 2026, type: "workshop", venue: "IJCAI-ECAI 2026 · Logical & Symbolic Reasoning of LLMs Workshop",
     where: "Bremen, Germany",
     title: "Clueing up LLMs with Tool-Augmented Deductive Reasoning",
@@ -229,7 +230,8 @@ const PUBLICATIONS = [
 // link: optional URL to the paper · files: optional [label, url] pairs (slides, posters)
 const TALKS = [
   { date: "Dec 2026", event: "NeurIPS 2026 · AI & the Self Workshop", format: "Poster",
-    title: "Provenance and Perceived Humanness in Social Media Political Discourse", where: "Paris, France", upcoming: true },
+    title: "Provenance and Perceived Humanness in Social Media Political Discourse", where: "Paris, France", upcoming: true,
+    link: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf" },
   { date: "Aug 2026", event: "IJCAI-ECAI 2026 · LogiSymb Workshop", format: "Oral",
     title: "Clueing up LLMs with Tool-Augmented Deductive Reasoning", where: "Remote",
     link: "https://arxiv.org/abs/2609.18736" },
