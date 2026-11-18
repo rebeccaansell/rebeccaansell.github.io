@@ -130,14 +130,10 @@ const BOARD = [
     sub: "Georgetown University · Graduate School of Arts & Sciences", when: "Fall 2025 – expected 2028", where: "Washington, DC",
     body: ["Advised by Dr. Lisa Singh", "Lead Tutor (Fall 2025 – present)", "Teaching Assistant, Graduate Intro to Data Analytics (Fall 2026)"] },
 
-  { kind: "paper", short: "CAPWIC '26", icon: "🚂", title: "ACM CAPWIC 2026",
-    sub: "Paper Line · Talk", when: "Apr 2026", where: "Virginia Tech, Alexandria, VA",
-    body: ["\"Augmenting Datasets with Generated Data: Methods and Evaluation.\""] },
-
-  { kind: "paper", short: "ICLR '26", icon: "🚂", title: "ICLR 2026 Workshop",
-    sub: "Paper Line · Poster", when: "Apr 2026", where: "Rio de Janeiro, Brazil",
-    body: ["\"How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment.\" With Autumn Toney-Wails."],
-    link: { url: "https://arxiv.org/abs/2603.17169", label: "arXiv" } },
+  { kind: "paper", short: "ICLR & CAPWIC '26", icon: "🚂", title: "ICLR 2026 & ACM CAPWIC 2026",
+    sub: "Paper Line · Poster & Talk", when: "Apr 2026", where: "Rio de Janeiro, Brazil · Alexandria, VA",
+    body: ["ICLR 2026 Workshop (poster): \"How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment.\" With Autumn Toney-Wails.", "ACM CAPWIC 2026 (talk): \"Augmenting Datasets with Generated Data: Methods and Evaluation.\""],
+    link: { url: "https://arxiv.org/abs/2603.17169", label: "ICLR paper on arXiv" } },
 
   { kind: "honor", short: "Coursework Done", icon: "✅", title: "PhD Coursework Complete",
     sub: "Georgetown University", when: "May 2026",
@@ -147,24 +143,28 @@ const BOARD = [
     sub: "Verition Fund Management", when: "May 2026 – Aug 2026", where: "New York, NY",
     body: ["LLM-based market-intelligence tools and repo analytics."] },
 
-  { kind: "corner", short: "DeLTA '26", icon: "🚂", title: "DeLTA 2026",
+  { kind: "paper", short: "DeLTA '26", icon: "🚂", title: "DeLTA 2026",
     sub: "Paper Line · Talk", when: "Jul 2026", where: "Porto, Portugal",
     body: ["\"When Alignment Feels Artificial: Evaluating Preference-Based Fine-Tuning for Perceived Humanness.\" With Lisa Singh."],
     link: { url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:qjMakFHDy7sC", label: "View paper" } },
 
-  { kind: "paper", short: "IJCAI '26", icon: "🚂", title: "IJCAI-ECAI 2026 Workshop",
+  { kind: "corner", short: "IJCAI '26", icon: "🚂", title: "IJCAI-ECAI 2026 Workshop",
     sub: "Paper Line · Oral", when: "Aug 2026", where: "Remote",
     body: ["\"Clueing up LLMs with Tool-Augmented Deductive Reasoning.\" With Autumn Toney-Wails."],
     link: { url: "https://arxiv.org/abs/2609.18736", label: "arXiv" } },
 
   { kind: "boardwalk", short: "PNAS", icon: "📖", title: "PNAS 2026",
-    sub: "Proceedings of the National Academy of Sciences", when: "Forthcoming",
-    body: ["Co-author: \"Human-authored or AI-generated? Humans show limited ability to tell the difference for political content on social media.\""] },
+    sub: "Proceedings of the National Academy of Sciences", when: "Nov 2026",
+    body: ["Co-author: \"Humans show limited ability to distinguish human-authored and AI-generated political content on social media.\""] },
 
   { kind: "chance", short: "NeurIPS '26", icon: "?", title: "NeurIPS 2026 · AI & the Self",
     sub: "Chance · Poster", when: "Dec 2026", where: "Paris, France",
     body: ["\"Provenance and Perceived Humanness in Social Media Political Discourse.\""],
     link: { url: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf", label: "Paper" } },
+
+  { kind: "future", short: "Tudor", icon: "🇬🇧", title: "AI Engineer Intern",
+    sub: "Tudor Group", when: "Summer 2027", where: "London, UK",
+    body: [] },
 
   { kind: "future", short: "Area Exam", icon: "📝", title: "Area Exam",
     sub: "Next step",
@@ -187,7 +187,7 @@ const BOARD = [
 // links: add any of { pdf, arxiv, article, code, slides, scholar } as URLs
 const PUBLICATIONS = [
   { year: 2026, type: "journal", venue: "PNAS", note: "Forthcoming",
-    title: "Human-authored or AI-generated? Humans show limited ability to tell the difference for political content on social media",
+    title: "Humans show limited ability to distinguish human-authored and AI-generated political content on social media",
     authors: "", role: "Co-author", links: {} },
   { year: 2026, type: "conference", venue: "DeLTA 2026",
     where: "Porto, Portugal",
