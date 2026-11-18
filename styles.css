@@ -339,6 +339,8 @@ button { font: inherit; color: inherit; }
 .card.conference { --c: var(--blue); }
 .card.workshop { --c: var(--green); }
 .card.thesis { --c: var(--purple); }
+.card.short { --c: var(--exp); }
+.card.tutorial { --c: var(--honor); }
 .card.article { --c: var(--primary-dark); }
 .card-top { display: flex; justify-content: space-between; align-items: center; }
 .card-type { font-family: var(--display); font-size: .66rem; letter-spacing: .1em; color: #fff; background: var(--c); padding: 3px 9px; border-radius: 6px; border: 2px solid var(--ink); }

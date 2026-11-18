@@ -238,7 +238,7 @@ $("#mono-next").addEventListener("click", () => moveTo((pos + 1) % BOARD.length)
 moveTo(0);
 
 // ── Publications ──
-const TYPE_LABEL = { journal: "Journal", conference: "Conference", workshop: "Workshop", thesis: "Thesis", article: "Article" };
+const TYPE_LABEL = { journal: "Journal", conference: "Conference", workshop: "Workshop", short: "Research short", tutorial: "Tutorial", thesis: "Thesis", article: "Article" };
 const LINK_LABEL = { pdf: "PDF", arxiv: "arXiv", article: "Read article", code: "Code", slides: "Slides", poster: "Poster", scholar: "Google Scholar", doi: "DOI", openreview: "OpenReview", paper: "Paper" };
 const pubList = $("#pub-list");
 const pubFilters = $("#pub-filters");

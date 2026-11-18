@@ -162,12 +162,12 @@ const BOARD = [
     body: ["\"Provenance and Perceived Humanness in Social Media Political Discourse.\" With Lisa Singh, Tiago Ventura and Leticia Bode."],
     link: { url: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf", label: "Paper" } },
 
-  { kind: "future", short: "Tudor", icon: "🇬🇧", title: "AI Engineer Intern",
-    sub: "Tudor Group", when: "Summer 2027", where: "London, UK",
+  { kind: "future", short: "Area Exam", icon: "📝", title: "Area Exam",
+    sub: "Next step", when: "Expected Jan 2027",
     body: [] },
 
-  { kind: "future", short: "Area Exam", icon: "📝", title: "Area Exam",
-    sub: "Next step",
+  { kind: "future", short: "Tudor", icon: "🇬🇧", title: "AI Engineer Intern",
+    sub: "Tudor Group", when: "Jun – Aug 2027", where: "London, UK",
     body: [] },
 
   { kind: "future", short: "Proposal", icon: "📋", title: "Ph.D. Proposal",
@@ -182,7 +182,7 @@ const BOARD = [
 
 
 // ── Publications ──
-// type: journal | conference | workshop | thesis | article
+// type: journal | conference | workshop | short | tutorial | thesis | article
 // where: optional conference location
 // links: add any of { pdf, arxiv, article, code, slides, scholar } as URLs
 const PUBLICATIONS = [
@@ -206,6 +206,9 @@ const PUBLICATIONS = [
     where: "Rio de Janeiro, Brazil",
     title: "How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment",
     authors: "Ansell, R., Toney-Wails, A.", links: { arxiv: "https://arxiv.org/abs/2603.17169", poster: "files/ICLR2026_Clue_Poster.pdf" } },
+  { year: 2026, type: "tutorial", venue: "ACM CAPWIC 2026", where: "Virginia Tech, Alexandria, VA",
+    title: "Augmenting Datasets with Generated Data: Methods and Evaluation",
+    authors: "Ansell, R.", links: { slides: "files/CAPWIC2026_Slides.pdf" } },
   { year: 2025, type: "workshop", venue: "ICDM 2025 Workshops (ICDMW)",
     where: "Washington, DC",
     title: "Using Stance Detection Models to Improve Our Understanding of the Firearm Policy Debate on Social Media",
@@ -215,6 +218,9 @@ const PUBLICATIONS = [
     title: "Human in the Loop: Fine-Tuning Language Models with Perceived Humanness",
     authors: "Ansell, R.",
     links: { scholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:u5HHmVD_uO8C" } },
+  { year: 2025, type: "short", venue: "ACM CAPWIC 2025", where: "The George Washington University, Washington, DC",
+    title: "Assessing Public Perception of AI-Generated Social Media Content of the 2024 U.S. Presidential Debate",
+    authors: "Ansell, R., Ventura, T., Paik, S., Toney-Wails, A., Bode, L., Singh, L.", links: { slides: "files/CAPWIC2025_Slides.pdf" } },
   { year: 2024, type: "article", venue: "U.S. Election Analysis 2024: Media, Voters and the Campaign",
     title: "Analyzing the Perceived Humanness of AI-Generated Social Media Content Around the Presidential Debate",
     authors: "Ventura, T., Ansell, R., Paik, S., Toney, A., Bode, L., Singh, L.",
