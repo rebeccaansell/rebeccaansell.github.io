@@ -199,6 +199,10 @@ function iconHTML(icon) {
   return icon === "mountain" ? MOUNTAIN : icon;
 }
 
+function linkButton(link) {
+  return `<a class="deed-link" href="${link.url}" target="_blank" rel="noopener">${link.label} ↗</a>`;
+}
+
 function showDeed(i) {
   const s = BOARD[i];
   const label = s.label || KIND_LABEL[s.kind];
@@ -209,8 +213,8 @@ function showDeed(i) {
       ${s.icon === "mountain" ? `<div class="deed-art">${MOUNTAIN}</div>` : ""}
       ${s.sub ? `<p class="deed-sub">${s.sub}</p>` : ""}
       ${s.when || s.where ? `<p class="deed-meta">${[s.when, s.where].filter(Boolean).join(" · ")}</p>` : ""}
-      ${s.body.length ? `<ul>${s.body.map((b) => `<li>${b}</li>`).join("")}</ul>` : ""}
-      ${s.link ? `<a class="deed-link" href="${s.link.url}" target="_blank" rel="noopener">${s.link.label} ↗</a>` : ""}
+      ${s.body.length ? `<ul>${s.body.map((b) => `<li>${typeof b === "string" ? b : `${b.text}<br>${linkButton(b.link)}`}</li>`).join("")}</ul>` : ""}
+      ${s.link ? linkButton(s.link) : ""}
     </div>
     <footer>Space ${i + 1} of ${BOARD.length}</footer>`;
 }

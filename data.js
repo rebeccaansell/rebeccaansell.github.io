@@ -58,7 +58,7 @@ const QUESTIONS = [
 // ── Career board: clockwise from GO. ──
 // Must have a multiple of 4 spaces; every (length / 4)th space is a corner.
 // kind: corner | edu | exp | honor | paper | chance | chest | boardwalk | future (greyed out, not done yet)
-// optional link: { url, label } shows a button on the title deed; label: overrides the card's small header
+// optional link: { url, label } shows a button on the title deed (a body item can also be { text, link }); label: overrides the card's small header
 const BOARD = [
   { kind: "corner", short: "GO", icon: "<span class=\"go-flags\">🇿🇦 → 🇺🇸</span>⬅", title: "GO!",
     sub: "East London, South Africa → New York City",
@@ -133,8 +133,11 @@ const BOARD = [
 
   { kind: "paper", short: "Clue Papers '26", icon: "🔍", title: "The Clue Papers",
     sub: "Paper Line · ICLR & IJCAI-ECAI 2026 Workshops", when: "Apr & Aug 2026",
-    body: ["ICLR 2026 (poster, Rio de Janeiro): \"How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment.\"", "IJCAI-ECAI 2026: \"Clueing up LLMs with Tool-Augmented Deductive Reasoning.\" <a href=\"https://arxiv.org/abs/2609.18736\" target=\"_blank\" rel=\"noopener\">arXiv ↗</a>", "Both with Autumn Toney-Wails."],
-    link: { url: "https://arxiv.org/abs/2603.17169", label: "ICLR paper on arXiv" } },
+    body: [
+      { text: "ICLR 2026 (poster, Rio de Janeiro): \"How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment.\"", link: { url: "https://arxiv.org/abs/2603.17169", label: "arXiv" } },
+      { text: "IJCAI-ECAI 2026: \"Clueing up LLMs with Tool-Augmented Deductive Reasoning.\"", link: { url: "https://arxiv.org/abs/2609.18736", label: "arXiv" } },
+      "Both with Autumn Toney-Wails.",
+    ] },
 
   { kind: "honor", short: "Coursework Done", icon: "✅", title: "PhD Coursework Complete",
     sub: "Georgetown University", when: "May 2026",

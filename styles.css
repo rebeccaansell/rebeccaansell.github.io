@@ -316,6 +316,7 @@ button { font: inherit; color: inherit; }
 .deed ul { margin: 0; padding-left: 18px; font-size: .92rem; }
 .deed li { margin-bottom: 6px; }
 .deed-link { display: inline-block; margin-top: 10px; font-family: var(--display); font-size: .74rem; color: var(--ink); text-decoration: none; border: 2px solid var(--ink); border-radius: 8px; padding: 5px 10px; background: var(--primary-soft); box-shadow: 2px 2px 0 var(--ink); }
+.deed li .deed-link { margin: 6px 0 4px; }
 .deed-link:hover { background: var(--primary); color: #fff; }
 .deed footer { border-top: 1.5px dashed var(--ink); padding-top: 8px; font-size: .74rem; color: var(--muted); text-align: center; font-family: var(--display); letter-spacing: .06em; }
 
