@@ -155,7 +155,8 @@ const BOARD = [
 
   { kind: "boardwalk", short: "PNAS", icon: "📖", title: "PNAS 2026",
     sub: "Proceedings of the National Academy of Sciences", when: "Nov 2026",
-    body: ["Co-author: \"Humans show limited ability to distinguish human-authored and AI-generated political content on social media.\""] },
+    body: ["\"Humans show limited ability to distinguish human-authored and AI-generated political content on social media.\" With Sejin Paik, Tiago Ventura, Leticia Bode, Autumn Toney-Wails and Lisa Singh."],
+    link: { url: "https://www.pnas.org/doi/10.1073/pnas.2534309123", label: "Paper" } },
 
   { kind: "chance", short: "NeurIPS '26", icon: "?", title: "NeurIPS 2026 · AI & the Self",
     sub: "Chance · Poster", when: "Dec 2026", where: "Paris, France",
@@ -186,9 +187,9 @@ const BOARD = [
 // where: optional conference location
 // links: add any of { pdf, arxiv, article, code, slides, scholar } as URLs
 const PUBLICATIONS = [
-  { year: 2026, type: "journal", venue: "PNAS", note: "Forthcoming",
+  { year: 2026, type: "journal", venue: "Proceedings of the National Academy of Sciences (PNAS)",
     title: "Humans show limited ability to distinguish human-authored and AI-generated political content on social media",
-    authors: "", role: "Co-author", links: {} },
+    authors: "Paik, S., Ventura, T., Ansell, R., Bode, L., Toney-Wails, A., Singh, L.", links: { paper: "https://www.pnas.org/doi/10.1073/pnas.2534309123", doi: "https://doi.org/10.1073/pnas.2534309123" } },
   { year: 2026, type: "conference", venue: "DeLTA 2026",
     where: "Porto, Portugal",
     title: "When Alignment Feels Artificial: Evaluating Preference-Based Fine-Tuning for Perceived Humanness",
