@@ -201,7 +201,7 @@ function iconHTML(icon) {
 
 function showDeed(i) {
   const s = BOARD[i];
-  const label = KIND_LABEL[s.kind];
+  const label = s.label || KIND_LABEL[s.kind];
   deed.className = `deed ${s.kind}`;
   deed.innerHTML = `
     <header><small>${label || "Space " + (i + 1)}</small><h3>${s.title}</h3></header>

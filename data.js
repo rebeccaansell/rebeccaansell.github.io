@@ -58,7 +58,7 @@ const QUESTIONS = [
 // ── Career board: clockwise from GO. ──
 // Must have a multiple of 4 spaces; every (length / 4)th space is a corner.
 // kind: corner | edu | exp | honor | paper | chance | chest | boardwalk | future (greyed out, not done yet)
-// optional link: { url, label } shows a button on the title deed
+// optional link: { url, label } shows a button on the title deed; label: overrides the card's small header
 const BOARD = [
   { kind: "corner", short: "GO", icon: "<span class=\"go-flags\">🇿🇦 → 🇺🇸</span>⬅", title: "GO!",
     sub: "East London, South Africa → New York City",
@@ -97,11 +97,12 @@ const BOARD = [
 
   { kind: "exp", short: "MDI Scholar", icon: "📊", title: "Massive Data Institute Scholar",
     sub: "Georgetown University", when: "May 2024 – Aug 2025", where: "Washington, DC",
-    body: ["Research on how people perceive AI-generated social media content around the 2024 US election."] },
+    body: ["Built a dataset of 4,000 social media posts from X, YouTube, TikTok and Truth Social, human-written and AI-generated", "Collected pairwise human judgments of which posts seemed AI-generated", "Built models to detect and measure the perceived humanness of AI-generated content around the 2024 US election"] },
 
-  { kind: "chest", short: "REU 2024", icon: "🧑‍🏫", title: "REU Mentor",
-    sub: "Community Chest", when: "Summer 2024", where: "Washington, DC",
-    body: ["Mentored REU students on the perceived humanness of AI-generated posts about the 2024 presidential debate."] },
+  { kind: "paper", short: "MDI Poster '24", icon: "🚂", title: "MDI Student Research Poster",
+    sub: "Paper Line · Poster", when: "Aug 2024", where: "Georgetown University",
+    body: ["\"Detecting Humanness across Social Media Platforms.\""],
+    link: { url: "files/MDI_Poster_Summer2024.pdf", label: "Poster" } },
 
   { kind: "paper", short: "Election '24", icon: "🚂", title: "U.S. Election Analysis 2024",
     sub: "Paper Line · Article", when: "2024",
@@ -130,9 +131,9 @@ const BOARD = [
     sub: "Georgetown University · Graduate School of Arts & Sciences", when: "Fall 2025 – expected 2028", where: "Washington, DC",
     body: ["Advised by Dr. Lisa Singh", "Lead Tutor (Fall 2025 – present)", "Teaching Assistant, Graduate Intro to Data Analytics (Fall 2026)"] },
 
-  { kind: "paper", short: "ICLR & CAPWIC '26", icon: "🚂", title: "ICLR 2026 & ACM CAPWIC 2026",
-    sub: "Paper Line · Poster & Tutorial", when: "Apr 2026", where: "Rio de Janeiro, Brazil · Alexandria, VA",
-    body: ["ICLR 2026 Workshop (poster): \"How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment.\" With Autumn Toney-Wails.", "ACM CAPWIC 2026 (tutorial): \"Augmenting Datasets with Generated Data: Methods and Evaluation.\""],
+  { kind: "paper", short: "Clue Papers '26", icon: "🔍", title: "The Clue Papers",
+    sub: "Paper Line · ICLR & IJCAI-ECAI 2026 Workshops", when: "Apr & Aug 2026",
+    body: ["ICLR 2026 (poster, Rio de Janeiro): \"How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment.\"", "IJCAI-ECAI 2026: \"Clueing up LLMs with Tool-Augmented Deductive Reasoning.\" <a href=\"https://arxiv.org/abs/2609.18736\" target=\"_blank\" rel=\"noopener\">arXiv ↗</a>", "Both with Autumn Toney-Wails."],
     link: { url: "https://arxiv.org/abs/2603.17169", label: "ICLR paper on arXiv" } },
 
   { kind: "honor", short: "Coursework Done", icon: "✅", title: "PhD Coursework Complete",
@@ -148,12 +149,7 @@ const BOARD = [
     body: ["\"When Alignment Feels Artificial: Evaluating Preference-Based Fine-Tuning for Perceived Humanness.\" With Lisa Singh."],
     link: { url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:qjMakFHDy7sC", label: "View paper" } },
 
-  { kind: "corner", short: "IJCAI '26", icon: "🚂", title: "IJCAI-ECAI 2026 Workshop",
-    sub: "Paper Line", when: "Aug 2026",
-    body: ["\"Clueing up LLMs with Tool-Augmented Deductive Reasoning.\" With Autumn Toney-Wails."],
-    link: { url: "https://arxiv.org/abs/2609.18736", label: "arXiv" } },
-
-  { kind: "boardwalk", short: "PNAS", icon: "📖", title: "PNAS 2026",
+  { kind: "corner", short: "PNAS", label: "Journal", icon: "📖", title: "PNAS 2026",
     sub: "Proceedings of the National Academy of Sciences", when: "Nov 2026",
     body: ["\"Humans show limited ability to distinguish human-authored and AI-generated political content on social media.\" With Sejin Paik, Tiago Ventura, Leticia Bode, Autumn Toney-Wails and Lisa Singh."],
     link: { url: "https://www.pnas.org/doi/10.1073/pnas.2534309123", label: "Paper" } },
@@ -175,7 +171,11 @@ const BOARD = [
     sub: "Next step",
     body: [] },
 
-  { kind: "future", short: "Ph.D. Defense", icon: "🎓", title: "Ph.D. Defense & Graduation",
+  { kind: "future", short: "Ph.D. Defense", icon: "📜", title: "Ph.D. Defense",
+    sub: "Next step", when: "Expected 2028",
+    body: [] },
+
+  { kind: "future", short: "Ph.D. Graduation", icon: "🎓", title: "Ph.D. Graduation",
     sub: "Next step", when: "Expected 2028",
     body: [] },
 
