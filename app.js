@@ -164,7 +164,7 @@ const MOUNTAIN = `<svg class="mtn" viewBox="0 0 64 48" aria-hidden="true">
   <path d="M22 14 L16.5 23 L20 21 L23 24 L26 20.5 Z" fill="#fff" stroke="#1d1a16" stroke-width="1.2" stroke-linejoin="round"/>
   <g class="mtn-flag"><path d="M22 14 V5" stroke="#1d1a16" stroke-width="1.5"/><path d="M22 5 L29 7.5 L22 10 Z" fill="#f26b1d" stroke="#1d1a16" stroke-width="1"/></g>
 </svg>`;
-const KIND_LABEL = { edu: "Education", exp: "Experience", honor: "Honors", paper: "Paper Line", chance: "Chance", chest: "Community Chest", boardwalk: "Top property", future: "Up next", corner: "" };
+const KIND_LABEL = { edu: "Education", exp: "Experience", honor: "Honors", paper: "Paper Line", chance: "Chance", chest: "Community Chest", boardwalk: "Journal", future: "Up next", corner: "" };
 const monoBoard = $("#mono-board");
 const deed = $("#deed");
 let pos = 0;
