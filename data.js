@@ -189,7 +189,7 @@ const BOARD = [
 const PUBLICATIONS = [
   { year: 2026, type: "journal", venue: "Proceedings of the National Academy of Sciences (PNAS)",
     title: "Humans show limited ability to distinguish human-authored and AI-generated political content on social media",
-    authors: "Paik, S., Ventura, T., Ansell, R., Bode, L., Toney-Wails, A., Singh, L.", links: { paper: "https://www.pnas.org/doi/10.1073/pnas.2534309123", doi: "https://doi.org/10.1073/pnas.2534309123" } },
+    authors: "Paik, S., Ventura, T., Ansell, R., Bode, L., Toney-Wails, A., Singh, L.", links: { paper: "https://www.pnas.org/doi/10.1073/pnas.2534309123" } },
   { year: 2026, type: "conference", venue: "DeLTA 2026",
     where: "Porto, Portugal",
     title: "When Alignment Feels Artificial: Evaluating Preference-Based Fine-Tuning for Perceived Humanness",
