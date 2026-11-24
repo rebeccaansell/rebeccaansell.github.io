@@ -22,7 +22,7 @@ const SITE = {
     "Humanness Project",
     "Public Debt is Public",
     "Forced Migration in Bangladesh",
-    "Evaluating Persona-Conditioned LLMs as Proxies for Human Judgments",
+    "Persona-conditioned LLMs",
   ],
 
   // Welcome message (based on the LinkedIn "About" section).

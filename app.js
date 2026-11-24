@@ -304,7 +304,7 @@ const talkToggle = $("#talk-toggle");
 function setTalksOpen(open) {
   $("#talk-list").classList.toggle("collapsed", !open);
   talkToggle.setAttribute("aria-expanded", open);
-  talkToggle.textContent = open ? "Show fewer ▴" : `Show all ${TALKS.length} talks ▾`;
+  talkToggle.textContent = open ? "Show fewer ▴" : "Show all talks ▾";
 }
 if (TALKS.length > TALKS_SHOWN) {
   talkToggle.hidden = false;
