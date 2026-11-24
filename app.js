@@ -291,13 +291,30 @@ $("#news-list").innerHTML = NEWS.map((n) => `
 function talkFiles(files) {
   return files ? `<span class="talk-files">${files.map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener">${label} ↗</a>`).join("")}</span>` : "";
 }
-$("#talk-list").innerHTML = TALKS.map((t) => `
-  <tr${t.upcoming ? ' class="upcoming"' : ""}>
+const TALKS_SHOWN = 3;
+$("#talk-list").innerHTML = TALKS.map((t, i) => `
+  <tr class="${[t.upcoming && "upcoming", i >= TALKS_SHOWN && "talk-more"].filter(Boolean).join(" ")}">
     <td data-label="Date">${t.date}${t.upcoming ? ' <span class="badge">Upcoming</span>' : ""}</td>
     <td data-label="Event">${t.event}${t.where ? `<small>${t.where}</small>` : ""}</td>
     <td data-label="Title"><span class="hand">${t.link ? `<a href="${t.link}" target="_blank" rel="noopener">${t.title} ↗</a>` : t.title}</span>${talkFiles(t.files)}${t.bullets ? `<ul class="talk-bullets">${t.bullets.map((b) => `<li>${b.text}${talkFiles(b.files)}</li>`).join("")}</ul>` : ""}</td>
     <td data-label="Play">${t.format ? `<span class="play">${t.format}</span>` : "—"}</td>
   </tr>`).join("");
+
+const talkToggle = $("#talk-toggle");
+function setTalksOpen(open) {
+  $("#talk-list").classList.toggle("collapsed", !open);
+  talkToggle.setAttribute("aria-expanded", open);
+  talkToggle.textContent = open ? "Show fewer ▴" : `Show all ${TALKS.length} talks ▾`;
+}
+if (TALKS.length > TALKS_SHOWN) {
+  talkToggle.hidden = false;
+  setTalksOpen(false);
+  talkToggle.addEventListener("click", () => {
+    const open = talkToggle.getAttribute("aria-expanded") !== "true";
+    setTalksOpen(open);
+    if (!open) $("#talks").scrollIntoView({ block: "start" });
+  });
+}
 
 // ── Contact ──
 const CONTACT = [

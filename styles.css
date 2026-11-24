@@ -402,6 +402,9 @@ button { font: inherit; color: inherit; }
 .scorepad .hand a:hover { color: var(--ink); }
 .play { display: inline-block; font-family: var(--display); font-size: .66rem; padding: 3px 8px; border: 2px solid var(--ink); border-radius: 6px; background: var(--primary-soft); white-space: nowrap; }
 .upcoming { background: #fff7d6; }
+#talk-list.collapsed tr.talk-more { display: none; }
+.talk-toggle-wrap { text-align: center; margin-top: 20px; }
+#talk-toggle[hidden] { display: none; }
 
 /* ── Contact ── */
 #contact { text-align: center; }

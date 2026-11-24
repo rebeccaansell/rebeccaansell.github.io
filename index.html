@@ -9,17 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@500;700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-11-24c">
+  <link rel="stylesheet" href="styles.css?v=2026-11-24d">
 </head>
 <body>
 
 <header class="topbar">
   <nav>
     <a href="#about">About</a>
-    <a href="#career">Roadmap</a>
     <a href="#publications">Papers</a>
     <a href="#news">Press</a>
     <a href="#talks">Talks</a>
+    <a href="#career">Roadmap</a>
     <a href="#contact">Contact</a>
   </nav>
   <a href="#top" class="brand" aria-label="Rebecca J. Ansell, back to top">
@@ -106,10 +106,46 @@
     </div>
   </section>
 
+  <!-- ── Publications ── -->
+  <section id="publications" class="section">
+    <div class="section-head">
+      <span class="step">Round 2</span>
+      <h2>Publications</h2>
+      <p>Draw from the deck, or filter it by card type.</p>
+    </div>
+    <div class="chips" id="pub-filters" role="group" aria-label="Filter publications"></div>
+    <div class="cards" id="pub-list"></div>
+  </section>
+
+  <!-- ── News ── -->
+  <section id="news" class="section">
+    <div class="section-head">
+      <span class="step">Round 3</span>
+      <h2>Press</h2>
+    </div>
+    <div class="clips" id="news-list"></div>
+  </section>
+
+  <!-- ── Talks ── -->
+  <section id="talks" class="section">
+    <div class="section-head">
+      <span class="step">Round 4</span>
+      <h2>Talks &amp; presentations</h2>
+    </div>
+    <div class="scorepad">
+      <div class="scorepad-title">SCORE PAD · <span>Player: R. Ansell</span></div>
+      <table>
+        <thead><tr><th>Date</th><th>Event</th><th>Title</th><th>Play</th></tr></thead>
+        <tbody id="talk-list" class="collapsed"></tbody>
+      </table>
+    </div>
+    <div class="talk-toggle-wrap"><button class="btn btn-ghost" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-list" hidden></button></div>
+  </section>
+
   <!-- ── Career board ── -->
   <section id="career" class="section">
     <div class="section-head">
-      <span class="step">Round 2</span>
+      <span class="step">Round 5</span>
       <h2>The Roadmap</h2>
       <p>The academic journey so far...</p>
     </div>
@@ -144,41 +180,6 @@
     </div>
   </section>
 
-  <!-- ── Publications ── -->
-  <section id="publications" class="section">
-    <div class="section-head">
-      <span class="step">Round 3</span>
-      <h2>Publications</h2>
-      <p>Draw from the deck, or filter it by card type.</p>
-    </div>
-    <div class="chips" id="pub-filters" role="group" aria-label="Filter publications"></div>
-    <div class="cards" id="pub-list"></div>
-  </section>
-
-  <!-- ── News ── -->
-  <section id="news" class="section">
-    <div class="section-head">
-      <span class="step">Round 4</span>
-      <h2>Press</h2>
-    </div>
-    <div class="clips" id="news-list"></div>
-  </section>
-
-  <!-- ── Talks ── -->
-  <section id="talks" class="section">
-    <div class="section-head">
-      <span class="step">Round 5</span>
-      <h2>Talks &amp; presentations</h2>
-    </div>
-    <div class="scorepad">
-      <div class="scorepad-title">SCORE PAD · <span>Player: R. Ansell</span></div>
-      <table>
-        <thead><tr><th>Date</th><th>Event</th><th>Title</th><th>Play</th></tr></thead>
-        <tbody id="talk-list"></tbody>
-      </table>
-    </div>
-  </section>
-
   <!-- ── Contact ── -->
   <section id="contact" class="section">
     <div class="section-head">
@@ -209,7 +210,7 @@
   © <span id="year"></span> Rebecca Ansell · No batteries required.
 </footer>
 
-<script src="data.js?v=2026-11-24c"></script>
-<script src="app.js?v=2026-11-24c"></script>
+<script src="data.js?v=2026-11-24d"></script>
+<script src="app.js?v=2026-11-24d"></script>
 </body>
 </html>
