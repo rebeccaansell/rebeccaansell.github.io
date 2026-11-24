@@ -193,10 +193,12 @@ const BOARD = [
 // ── Publications ──
 // type: journal | conference | workshop | thesis | article
 // where: optional conference location
+// abstract: optional; makes the card clickable to open a larger view
 // links: add any of { pdf, arxiv, article, code, slides, scholar } as URLs
 const PUBLICATIONS = [
   { year: 2026, type: "journal", venue: "Proceedings of the National Academy of Sciences (PNAS)",
     title: "Humans show limited ability to distinguish human-authored and AI-generated political content on social media",
+    abstract: "This study employs a set of behavioral experiments to examine how individuals perceive the humanness of social media posts about the 2024 U.S. presidential debate between Kamala Harris and Donald Trump. Posts presented in the experiment were authored either by humans or chatbots, varying the large language model (LLM), the model architecture, the social media platform, and the political personas. Participants judged randomly paired posts to identify which they perceived to be AI-generated. We find that human-authored posts were on average perceived as more human-like than AI outputs generated from five of the six LLMs in this study. However, participants’ ability to detect AI-generated content is limited. They do so only slightly above chance in human–AI pairs, and this ability weakens for newer LLMs, varies by platform, and reflects partisan bias. Only posts generated with Llama 3.3 scored, on average, higher on perceived humanness than human-authored posts. The social media platform also mattered, with participants distinguishing human from AI on most platforms (YouTube, TikTok, Truth Social), but not on X/Twitter. Incivility and negative emotions are associated with high humanness perceptions, and partisan identity also shaped evaluations, with Republican respondents more likely to view ideologically misaligned AI posts as AI-generated.",
     authors: "Paik, S., Ventura, T., Ansell, R., Bode, L., Toney-Wails, A., Singh, L.", links: { paper: "https://www.pnas.org/doi/10.1073/pnas.2534309123" } },
   { year: 2026, type: "conference", venue: "DeLTA 2026",
     where: "Porto, Portugal",
@@ -206,19 +208,22 @@ const PUBLICATIONS = [
   { year: 2026, type: "workshop", venue: "NeurIPS 2026 · AI & the Self Workshop",
     where: "Paris, France",
     title: "Provenance and Perceived Humanness in Social Media Political Discourse",
+    abstract: "Is this post written by a human? As social media content can be human-written, AI-assisted, or entirely AI-generated, determining its source from text alone becomes more difficult. Given the increasing prevalence of AI content, perhaps a new relevant question is: How human does a post seem? Using human judgments of political content surrounding the 2024 U.S. presidential debate across four social media platforms, we investigate how well perceived humanness can be modeled and which linguistic characteristics are associated with perceptions of humanness. We also examine source classification (provenance) as a complementary approach to studying this content. We find that lightweight models can predict perceived humanness using limited labeled data. Across platforms, posts with higher predicted humanness tend to be easier to read, use shorter words, and express more negative sentiment. Together, these findings show that perceived humanness can be predicted efficiently and reveal both shared and platform-specific patterns in how human-written social-media content appears to readers.",
     authors: "Ansell, R., Singh, L., Ventura, T., Bode, L.", links: { paper: "https://openreview.net/attachment?id=Noc5ThJYu7&name=pdf" } },
   { year: 2026, type: "workshop", venue: "IJCAI-ECAI 2026 · Logical & Symbolic Reasoning of LLMs Workshop",
     where: "Bremen, Germany",
     title: "Clueing up LLMs with Tool-Augmented Deductive Reasoning",
+    abstract: "Despite recent advances in large language models (LLMs), performing logically consistent deductive reasoning over extended interactions remains challenging. Tasks that require integrating evidence across multiple reasoning steps, maintaining consistency with prior inferences, and updating beliefs under new constraints can surface limitations in current models while providing a useful testbed for evaluating reasoning enhancements. In this paper, we implement a text-based, multi-agent version of the classic board game Clue as an environment to evaluate multi-step, agentic deductive reasoning. In this setting, agents must infer hidden information from a sequence of observations, maintain consistency across turns, and reason over an evolving set of logical constraints. We instantiate six LLM-based agents (GPT-4o-mini and Gemini-2.5-Flash) as players that engage in turn-based gameplay; using three agents per model family, we establish baseline performance across repeated games. We then introduce a tool-augmented approach in which a structured possibility matrix converts implicit game state from generated reasoning logs into an explicit representation of remaining possibilities. The possibility matrix encodes extended-turn memory and deductive constraints, offloading these tasks from the agent. We compare this approach against the baseline to evaluate how tool augmentation supports reasoning quality and task success for autonomous agents in a strategic reasoning environment.",
     authors: "Ansell, R., Toney-Wails, A.", links: { arxiv: "https://arxiv.org/abs/2609.18736" } },
   { year: 2026, type: "workshop", venue: "ICLR 2026 · Workshop on Logical Reasoning of LLMs",
     where: "Rio de Janeiro, Brazil",
     title: "How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment",
+    abstract: "Deducing whodunit proves challenging for LLM agents. In this paper, we implement a text-based multi-agent version of the classic board game Clue as a rule-based testbed for evaluating multi-step deductive reasoning, with six agents drawn from GPT-4o-mini and Gemini-2.5-Flash. We further investigate whether fine-tuning on structured logic puzzles transfers to improved in-game reasoning and gameplay. Across 18 simulated games, agents achieve only four correct wins, indicating difficulty in maintaining consistent deductive reasoning over the course of a full game. Additionally, we find that fine-tuning does not reliably improve performance and, in some cases, appears to increase reasoning volume without improving reasoning precision.",
     authors: "Ansell, R., Toney-Wails, A.", links: { arxiv: "https://arxiv.org/abs/2603.17169", poster: "files/ICLR2026_Clue_Poster.pdf" } },
   { year: 2025, type: "workshop", venue: "ICDM 2025 Workshops (ICDMW)",
     where: "Washington, DC",
     title: "Using Stance Detection Models to Improve Our Understanding of the Firearm Policy Debate on Social Media",
-    authors: "Allah, I., Baucom, C., Bogen, C., Brown, R., Cheek, J., Higgins, K., Kendall, E., Beaugris, J., Prince, C., Sakina, U., Stacy, R., Yeasmin, S., Ansell, R., Ahmed, M., Singh, L.",
+    authors: "REU Cohort, Ahmed, M., Ansell, R., Singh, L.",
     links: { paper: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11415756" } },
   { year: 2025, type: "thesis", venue: "Master's Thesis, Georgetown University",
     title: "Human in the Loop: Fine-Tuning Language Models with Perceived Humanness",

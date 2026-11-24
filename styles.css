@@ -377,6 +377,27 @@ button { font: inherit; color: inherit; }
 .clip-link:hover { background: var(--primary-soft); }
 @media (prefers-reduced-motion: reduce) { .clip, .clip:nth-child(even), .clip:hover { transform: none; } }
 
+/* ── Publication detail (click a card) ── */
+.card.has-abstract { cursor: pointer; }
+.card.has-abstract:focus-visible { outline: 3px solid var(--c); outline-offset: 4px; }
+.card-more { font-family: var(--hand); font-size: 1.2rem; color: var(--c); align-self: flex-end; line-height: 1; }
+.card.has-abstract:hover .card-more { text-decoration: underline; text-underline-offset: 3px; }
+.pub-modal { padding: 0; margin: auto; border: 0; background: transparent; width: min(720px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 48px); overflow: visible; box-sizing: border-box; }
+.pub-modal::backdrop { background: rgba(29, 26, 22, .55); }
+.pub-modal .card { box-sizing: border-box; width: 100%; max-height: calc(100dvh - 48px); overflow-y: auto; padding: 28px 28px 24px; gap: 12px; transform: none; }
+.pub-modal .card:hover { transform: none; }
+.pub-modal .card h3 { font-size: 1.35rem; }
+.pub-modal .card-top { padding-right: 44px; }
+@media (max-width: 640px) { .pub-modal .card { padding: 22px 18px 18px; } .pub-modal .card h3 { font-size: 1.15rem; } }
+.pub-modal[open] { animation: pub-pop .22s ease-out; }
+@keyframes pub-pop { from { opacity: 0; transform: scale(.9) rotate(-1.5deg); } to { opacity: 1; transform: none; } }
+.card-abstract { border-top: 2px dashed var(--c); padding-top: 12px; }
+.card-abstract h4 { font-family: var(--display); font-size: .72rem; letter-spacing: .1em; color: var(--c); margin: 0 0 6px; }
+.card-abstract p { margin: 0; font-size: .95rem; line-height: 1.6; }
+.pub-close { position: absolute; top: 14px; right: 14px; z-index: 1; width: 34px; height: 34px; border: 2px solid var(--ink); border-radius: 50%; background: #fff; font-size: 1rem; cursor: pointer; }
+.pub-close:hover { background: var(--primary-soft); }
+@media (prefers-reduced-motion: reduce) { .pub-modal[open] { animation: none; } }
+
 /* ── Talks: score pad ── */
 .scorepad {
   max-width: 960px; margin: 0 auto; background: #fffdf5;

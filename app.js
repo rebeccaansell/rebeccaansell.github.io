@@ -259,19 +259,53 @@ function boldMe(authors) {
   return authors.replace(/Ansell, R\./g, "<strong>Ansell, R.</strong>");
 }
 
+function pubLinks(p) {
+  return Object.entries(p.links || {}).filter(([, url]) => url)
+    .map(([k, url]) => `<a href="${url}" target="_blank" rel="noopener">${LINK_LABEL[k] || k} ↗</a>`).join("");
+}
+
+function pubBody(p, titleId) {
+  const links = pubLinks(p);
+  const who = p.authors ? boldMe(p.authors) : (p.role || "");
+  return `
+      <div class="card-top"><span class="card-type">${TYPE_LABEL[p.type]}</span><span class="card-year">${p.year}</span></div>
+      <h3${titleId ? ` id="${titleId}"` : ""}>${p.title}</h3>
+      <p class="card-authors">${who}</p>
+      <p class="card-venue">${p.venue}${p.where ? `<span class="card-where">📍 ${p.where}</span>` : ""}${p.note ? ` <span class="badge">${p.note}</span>` : ""}</p>
+      ${titleId && p.abstract ? `<div class="card-abstract"><h4>Abstract</h4><p>${p.abstract}</p></div>` : ""}
+      ${links ? `<div class="card-links">${links}</div>` : ""}`;
+}
+
+const pubModal = $("#pub-modal");
+const pubModalCard = $("#pub-modal-card");
+let pubOpener = null;
+
+function openPub(p, opener) {
+  pubOpener = opener;
+  pubModalCard.className = `card ${p.type}`;
+  pubModalCard.innerHTML = `<button class="pub-close" type="button" aria-label="Close">✕</button>${pubBody(p, "pub-modal-title")}`;
+  pubModalCard.querySelector(".pub-close").addEventListener("click", () => pubModal.close());
+  pubModal.showModal();
+}
+pubModal.addEventListener("click", (e) => { if (e.target === pubModal) pubModal.close(); });
+pubModal.addEventListener("close", () => { if (pubOpener) pubOpener.focus(); });
+
 function renderPubs() {
   pubFilters.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.t === pubFilter));
   pubList.innerHTML = "";
   PUBLICATIONS.filter((p) => pubFilter === "all" || p.type === pubFilter).forEach((p) => {
-    const links = Object.entries(p.links || {}).filter(([, url]) => url)
-      .map(([k, url]) => `<a href="${url}" target="_blank" rel="noopener">${LINK_LABEL[k] || k} ↗</a>`).join("");
-    const who = p.authors ? boldMe(p.authors) : (p.role || "");
-    pubList.appendChild(el("article", { class: `card ${p.type}` }, `
-      <div class="card-top"><span class="card-type">${TYPE_LABEL[p.type]}</span><span class="card-year">${p.year}</span></div>
-      <h3>${p.title}</h3>
-      <p class="card-authors">${who}</p>
-      <p class="card-venue">${p.venue}${p.where ? `<span class="card-where">📍 ${p.where}</span>` : ""}${p.note ? ` <span class="badge">${p.note}</span>` : ""}</p>
-      ${links ? `<div class="card-links">${links}</div>` : ""}`));
+    const card = el("article", { class: `card ${p.type}${p.abstract ? " has-abstract" : ""}` }, pubBody(p));
+    if (p.abstract) {
+      card.tabIndex = 0;
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-label", `${p.title}: show abstract`);
+      card.insertAdjacentHTML("beforeend", `<span class="card-more">Read abstract ▸</span>`);
+      card.addEventListener("click", (e) => { if (!e.target.closest("a")) openPub(p, card); });
+      card.addEventListener("keydown", (e) => {
+        if ((e.key === "Enter" || e.key === " ") && e.target === card) { e.preventDefault(); openPub(p, card); }
+      });
+    }
+    pubList.appendChild(card);
   });
 }
 renderPubs();
