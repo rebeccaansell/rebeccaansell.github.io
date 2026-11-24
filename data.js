@@ -49,10 +49,10 @@ const QUESTIONS = [
   { key: "orange",      text: "Is their favorite color orange?" },
   { key: "southafrica", text: "Did they grow up in South Africa?" },
   { key: "phd",         text: "Are they a Computer Science PhD student?" },
-  { key: "hiking",      text: "Do they love hiking?" },
+  { key: "hiking",      text: "Do they love hiking and exploring national parks?" },
   { key: "waterpolo",   text: "Did they play water polo in college?" },
-  { key: "mentor",      text: "Do they enjoy teaching and mentoring?" },
-  { key: "hoya",        text: "Are they a Georgetown Hoya?" },
+  { key: "mentor",      text: "Are they a big board game fan?" },
+  { key: "hoya",        text: "Are they a Shark and a Hoya?" },
 ];
 
 // ── Career board: clockwise from GO. ──
