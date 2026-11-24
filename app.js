@@ -276,12 +276,26 @@ function renderPubs() {
 }
 renderPubs();
 
+// ── News ──
+$("#news-list").innerHTML = NEWS.map((n) => `
+  <article class="clip ${n.kind.toLowerCase()}">
+    <div class="clip-top"><span class="clip-kind">${n.kind}</span><span class="clip-date">${n.date}</span></div>
+    <p class="clip-outlet">${n.outlet}</p>
+    <h3><a href="${n.url}" target="_blank" rel="noopener">${n.title}</a></h3>
+    ${n.authors ? `<p class="clip-blurb">${boldMe(n.authors)}</p>` : ""}
+    ${n.blurb ? `<p class="clip-blurb">${n.blurb}</p>` : ""}
+    <a class="clip-link" href="${n.url}" target="_blank" rel="noopener">Read ${n.kind === "Press" ? "the story" : "the article"} ↗</a>
+  </article>`).join("");
+
 // ── Talks ──
+function talkFiles(files) {
+  return files ? `<span class="talk-files">${files.map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener">${label} ↗</a>`).join("")}</span>` : "";
+}
 $("#talk-list").innerHTML = TALKS.map((t) => `
   <tr${t.upcoming ? ' class="upcoming"' : ""}>
     <td data-label="Date">${t.date}${t.upcoming ? ' <span class="badge">Upcoming</span>' : ""}</td>
     <td data-label="Event">${t.event}${t.where ? `<small>${t.where}</small>` : ""}</td>
-    <td data-label="Title"><span class="hand">${t.link ? `<a href="${t.link}" target="_blank" rel="noopener">${t.title} ↗</a>` : t.title}</span>${t.files ? `<span class="talk-files">${t.files.map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener">${label} ↗</a>`).join("")}</span>` : ""}</td>
+    <td data-label="Title"><span class="hand">${t.link ? `<a href="${t.link}" target="_blank" rel="noopener">${t.title} ↗</a>` : t.title}</span>${talkFiles(t.files)}${t.bullets ? `<ul class="talk-bullets">${t.bullets.map((b) => `<li>${b.text}${talkFiles(b.files)}</li>`).join("")}</ul>` : ""}</td>
     <td data-label="Play">${t.format ? `<span class="play">${t.format}</span>` : "—"}</td>
   </tr>`).join("");
 

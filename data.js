@@ -59,8 +59,13 @@ const QUESTIONS = [
 // Must have a multiple of 4 spaces; every (length / 4)th space is a corner.
 // kind: corner | edu | exp | honor | paper | chance | chest | boardwalk | future (greyed out, not done yet)
 // optional link: { url, label } shows a button on the title deed (a body item can also be { text, link }); label: overrides the card's small header
+// Inline SVG flags (emoji flags don't render on Windows)
+const FLAG_ZA = `<svg class="flag" viewBox="0 0 90 60" role="img" aria-label="South Africa"><rect width="90" height="30" fill="#e03c31"/><rect y="30" width="90" height="30" fill="#001489"/><path d="M0 0 L45 30 H90 M45 30 L0 60" fill="none" stroke="#fff" stroke-width="22"/><path d="M0 0 L45 30 H90 M45 30 L0 60" fill="none" stroke="#007749" stroke-width="13"/><path d="M0 9 L31 30 L0 51 Z" fill="#ffb81c"/><path d="M0 15 L23 30 L0 45 Z" fill="#000"/></svg>`;
+const FLAG_US = `<svg class="flag" viewBox="0 0 76 40" role="img" aria-label="United States"><rect width="76" height="40" fill="#fff"/><path d="M0 1.54h76M0 7.69h76M0 13.85h76M0 20h76M0 26.15h76M0 32.31h76M0 38.46h76" stroke="#b22234" stroke-width="3.08"/><rect width="30.4" height="21.54" fill="#3c3b6e"/><g fill="#fff"><circle cx="5" cy="4" r="1.4"/><circle cx="12.5" cy="4" r="1.4"/><circle cx="20" cy="4" r="1.4"/><circle cx="27" cy="4" r="1.4"/><circle cx="8.7" cy="8.5" r="1.4"/><circle cx="16.2" cy="8.5" r="1.4"/><circle cx="23.7" cy="8.5" r="1.4"/><circle cx="5" cy="13" r="1.4"/><circle cx="12.5" cy="13" r="1.4"/><circle cx="20" cy="13" r="1.4"/><circle cx="27" cy="13" r="1.4"/><circle cx="8.7" cy="17.5" r="1.4"/><circle cx="16.2" cy="17.5" r="1.4"/><circle cx="23.7" cy="17.5" r="1.4"/></g></svg>`;
+const FLAG_GB = `<svg class="flag" viewBox="0 0 60 30" role="img" aria-label="United Kingdom"><clipPath id="gb-c"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L60 30M60 0L0 30" clip-path="url(#gb-c)" stroke="#c8102e" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>`;
+
 const BOARD = [
-  { kind: "corner", short: "GO", icon: "<span class=\"go-flags\">🇿🇦 → 🇺🇸</span>⬅", title: "GO!",
+  { kind: "corner", short: "GO", icon: `<span class="go-flags">${FLAG_ZA} → ${FLAG_US}</span>⬅`, title: "GO!",
     sub: "East London, South Africa → New York City",
     body: ["Moved from East London, South Africa to NYC.", "Roll the dice or press <b>Next space</b> to move around the board."] },
 
@@ -166,7 +171,7 @@ const BOARD = [
     sub: "Next step", when: "Expected Jan 2027",
     body: [] },
 
-  { kind: "future", short: "Tudor", icon: "🇬🇧", title: "AI Engineer Intern",
+  { kind: "future", short: "Tudor", icon: FLAG_GB, title: "AI Engineer Intern",
     sub: "Tudor Group", when: "Jun – Aug 2027", where: "London, UK",
     body: [] },
 
@@ -219,15 +224,26 @@ const PUBLICATIONS = [
     title: "Human in the Loop: Fine-Tuning Language Models with Perceived Humanness",
     authors: "Ansell, R.",
     links: { scholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:u5HHmVD_uO8C" } },
-  { year: 2024, type: "article", venue: "U.S. Election Analysis 2024: Media, Voters and the Campaign",
-    title: "Analyzing the Perceived Humanness of AI-Generated Social Media Content Around the Presidential Debate",
+];
+
+// ── In the news ──
+// kind: "Press" (coverage of the work) | "Article" (something you wrote)
+// date: display string · sort order is the order listed here
+const NEWS = [
+  { kind: "Press", outlet: "Georgetown McCourt School of Public Policy", date: "Nov 2026",
+    title: "McCourt Faculty Find People Struggle to Tell AI From Human Political Posts",
+    blurb: "Coverage of our PNAS study showing people do only slightly better than chance at spotting AI-written political posts.",
+    url: "https://mccourt.georgetown.edu/news/mccourt-faculty-find-people-struggle-to-tell-ai-from-human-political-posts/" },
+  { kind: "Article", outlet: "U.S. Election Analysis 2024: Media, Voters and the Campaign", date: "Nov 2024",
+    title: "How Human? Analyzing the Perceived Humanness of AI-Generated Social Media Content Around the U.S. 2024 Presidential Debate",
     authors: "Ventura, T., Ansell, R., Paik, S., Toney, A., Bode, L., Singh, L.",
-    links: { article: "https://www.electionanalysis.ws/us/president2024/section-6-digital-campaign/how-human-analyzing-the-perceived-humanness-of-ai-generated-social-media-content-around-the-u-s-2024-presidential-debate/" } },
+    url: "https://www.electionanalysis.ws/us/president2024/section-6-digital-campaign/how-human-analyzing-the-perceived-humanness-of-ai-generated-social-media-content-around-the-u-s-2024-presidential-debate/" },
 ];
 
 // ── Talks & presentations ──
 // format: Oral | Poster | Talk | Short talk | Mentoring …
 // link: optional URL to the paper · files: optional [label, url] pairs (slides, posters)
+// bullets: optional [{ text, files }] sub-items listed under the title
 const TALKS = [
   { date: "Dec 2026", event: "NeurIPS 2026 · AI & the Self Workshop", format: "Poster",
     title: "Provenance and Perceived Humanness in Social Media Political Discourse", where: "Paris, France", upcoming: true,
@@ -261,10 +277,10 @@ const TALKS = [
   { date: "Mar 2025", event: "ACM CAPWIC 2025", format: "Talk",
     title: "Assessing Public Perception of AI-Generated Social Media Content of the 2024 U.S. Presidential Debate", where: "The George Washington University, Washington, DC",
     files: [["Slides", "files/CAPWIC2025_Slides.pdf"]] },
-  { date: "Aug 2024", event: "Massive Data Institute · Student Research Posters", format: "Poster",
-    title: "Detecting Humanness across Social Media Platforms", where: "Georgetown University, Washington, DC",
-    files: [["Poster", "files/MDI_Poster_Summer2024.pdf"]] },
-  { date: "Summer 2024", event: "Georgetown REU Program", format: "Mentoring",
-    title: "Research lectures & mentoring: perceived humanness of AI-generated posts around the 2024 presidential debate", where: "Washington, DC",
-    link: "https://www.electionanalysis.ws/us/president2024/section-6-digital-campaign/how-human-analyzing-the-perceived-humanness-of-ai-generated-social-media-content-around-the-u-s-2024-presidential-debate/" },
+  { date: "Summer 2024", event: "Massive Data Institute", format: "Poster · Mentoring",
+    title: "MDI Scholar", where: "Georgetown University, Washington, DC",
+    bullets: [
+      { text: "Poster: \"Detecting Humanness across Social Media Platforms\"", files: [["Poster", "files/MDI_Poster_Summer2024.pdf"]] },
+      { text: "Research lectures & mentoring for Georgetown REU students: perceived humanness of AI-generated posts around the 2024 presidential debate" },
+    ] },
 ];
