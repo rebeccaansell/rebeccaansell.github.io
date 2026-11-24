@@ -193,7 +193,7 @@ const BOARD = [
 // ── Publications ──
 // type: journal | conference | workshop | thesis | article
 // where: optional conference location
-// abstract: optional; makes the card clickable to open a larger view
+// abstract: optional; makes the card clickable to open a larger view (use \n\n between paragraphs)
 // links: add any of { pdf, arxiv, article, code, slides, scholar } as URLs
 const PUBLICATIONS = [
   { year: 2026, type: "journal", venue: "Proceedings of the National Academy of Sciences (PNAS)",
@@ -228,6 +228,7 @@ const PUBLICATIONS = [
     links: { paper: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11415756" } },
   { year: 2025, type: "thesis", venue: "Master's Thesis, Georgetown University",
     title: "Human in the Loop: Fine-Tuning Language Models with Perceived Humanness",
+    abstract: "As large language models become increasingly sophisticated, understanding what makes AI-generated text appear human-like remains an open challenge, especially in subjective, high-stakes settings like political discourse. This thesis investigates how preference-based fine-tuning methods influence the authenticity of AI-generated content in the context of the 2024 U.S. presidential debate.\n\nTo assess alignment strategies, we conduct a comparative analysis of Supervised Fine-Tuning (SFT) and Direct Preference Optimization (DPO). We also propose a human-centered evaluation framework for perceived humanness and introduce the Perceived Humanness Indicator (PHI), a continuous evaluation metric derived from large-scale pairwise human judgments using the Bradley-Terry model.",
     authors: "Ansell, R.",
     links: { scholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nYq91MAAAAAJ&citation_for_view=nYq91MAAAAAJ:u5HHmVD_uO8C" } },
 ];

@@ -394,6 +394,7 @@ button { font: inherit; color: inherit; }
 .card-abstract { border-top: 2px dashed var(--c); padding-top: 12px; }
 .card-abstract h4 { font-family: var(--display); font-size: .72rem; letter-spacing: .1em; color: var(--c); margin: 0 0 6px; }
 .card-abstract p { margin: 0; font-size: .95rem; line-height: 1.6; }
+.card-abstract p + p { margin-top: .8em; }
 .pub-close { position: absolute; top: 14px; right: 14px; z-index: 1; width: 34px; height: 34px; border: 2px solid var(--ink); border-radius: 50%; background: #fff; font-size: 1rem; cursor: pointer; }
 .pub-close:hover { background: var(--primary-soft); }
 @media (prefers-reduced-motion: reduce) { .pub-modal[open] { animation: none; } }

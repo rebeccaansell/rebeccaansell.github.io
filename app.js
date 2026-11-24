@@ -272,7 +272,7 @@ function pubBody(p, titleId) {
       <h3${titleId ? ` id="${titleId}"` : ""}>${p.title}</h3>
       <p class="card-authors">${who}</p>
       <p class="card-venue">${p.venue}${p.where ? `<span class="card-where">📍 ${p.where}</span>` : ""}${p.note ? ` <span class="badge">${p.note}</span>` : ""}</p>
-      ${titleId && p.abstract ? `<div class="card-abstract"><h4>Abstract</h4><p>${p.abstract}</p></div>` : ""}
+      ${titleId && p.abstract ? `<div class="card-abstract"><h4>Abstract</h4>${p.abstract.split(/\n\s*\n/).map((para) => `<p>${para}</p>`).join("")}</div>` : ""}
       ${links ? `<div class="card-links">${links}</div>` : ""}`;
 }
 
