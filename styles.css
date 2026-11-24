@@ -219,9 +219,7 @@ button { font: inherit; color: inherit; }
 .bio h3 { font-family: var(--display); font-size: 1.2rem; margin-bottom: 12px; }
 .bio-text p:last-child { margin-bottom: 0; }
 .interests { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.interests li { padding: 3px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--primary-soft); font-size: .8rem; font-weight: 500; }
-.interests li:nth-child(3n+2) { background: #ffd2ad; }
-.interests li:nth-child(3n) { background: #fff; }
+.interests li { padding: 3px 11px; border: 1.5px solid var(--primary); border-radius: 999px; background: #fff; color: var(--primary-dark); font-size: .8rem; font-weight: 500; }
 
 /* ── Career board ── */
 .mono { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; align-items: center; }
